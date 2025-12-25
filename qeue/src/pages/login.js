@@ -62,7 +62,7 @@ const generateMockData = (endpoint) => {
       { id: 3, doctor: 'Dr. Emily Rodriguez', specialty: 'Dermatology', date: '2026-01-12', time: '11:00 AM', type: 'In-Person', status: 'pending' }
     ];
   }
-  if (endpoint === '/patient/medications') {
+  if (endpoint === '/pages/medications') {
     return [
       { id: 1, name: 'Lisinopril', dosage: '10mg', frequency: 'Once daily', timeOfDay: 'Morning', prescribed: 'Dr. Sarah Johnson', refillsLeft: 2 },
       { id: 2, name: 'Metformin', dosage: '500mg', frequency: 'Twice daily', timeOfDay: 'Morning & Evening', prescribed: 'Dr. Michael Chen', refillsLeft: 1 },
@@ -299,7 +299,7 @@ const Sidebar = ({ isOpen, onClose }) => {
   const navItems = [
     { icon: Home, label: 'Dashboard', href: '#' },
     { icon: Calendar, label: 'Appointments', href: '#' },
-    { icon: Pill, label: 'Medications', href: '#' },
+    { icon: Pill, label: 'Medications', href: 'Medication' },
     { icon: FileText, label: 'Medical Records', href: '#' },
     { icon: Activity, label: 'Health Tracking', href: '#' },
     { icon: Bell, label: 'Messages', href: '#', badge: 3 }
@@ -328,7 +328,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <h1 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                HealthCare
+                MediQeue
               </h1>
             </div>
             <button
@@ -495,7 +495,7 @@ const Dashboard = ({ onLogout, userEmail }) => {
   
   const { data: vitals, loading: vitalsLoading } = useApi('/patient/vitals', []);
   const { data: appointments, loading: appointmentsLoading } = useApi('/patient/appointments', []);
-  const { data: medications, loading: medicationsLoading } = useApi('/patient/medications', []);
+  const { data: medications, loading: medicationsLoading } = useApi('/pages/medications', []);
   const { data: activities, loading: activitiesLoading } = useApi('/patient/activity', []);
   
   useEffect(() => {

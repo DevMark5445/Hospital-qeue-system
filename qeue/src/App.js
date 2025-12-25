@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './componets/Navbar';
 import Qeue from './pages/Qeue';
 import Login from './pages/Login';
+import Medication from './pages/Medication';
 import Appoint from './pages/Appoint';
  
 import Dashboard from './pages/Dashboard';
@@ -20,6 +21,7 @@ function App() {
                         <Route path='/' element={<Home />} />
                         <Route path='/queue' element={<Qeue />} />
                         <Route path='/Login' element={<Login />} />
+                        <Route path='/medication' element={<Medication />} />
                         <Route path='/appoint' element={<Appoint />} />
                         <Route path='/dashboard' element={<Dashboard />} />
                       
