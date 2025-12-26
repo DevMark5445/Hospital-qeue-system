@@ -297,17 +297,17 @@ const Login = ({ onLoginSuccess }) => {
 // ============================================================================
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('Login');
+  const [currentPage, setCurrentPage] = useState('login');
   const [userEmail, setUserEmail] = useState('');
 
   const handleLoginSuccess = (email) => {
     setUserEmail(email);
-    setCurrentPage('Dashboard');
+    setCurrentPage('dashboard');
   };
 
   const handleLogout = () => {
     setUserEmail('');
-    setCurrentPage('Login');
+    setCurrentPage('login');
   };
 
   if (currentPage === 'dashboard') {
