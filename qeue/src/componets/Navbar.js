@@ -13,11 +13,7 @@ const Navbar = () => {
   }
 
   const menuItems = [
-    { name: 'Home', path: '/home' },
-    { name: 'Dashboard', path: '/Dashboard' },
-    { name: 'Book Appointment', path: '/Appointment' }, 
-    { name: 'My Appointments', path: '/MyAppointment' },
-    { name: 'Queue Status', path: '/Qeue' }
+   
   ];
 
   const toggleMenu = () => {
