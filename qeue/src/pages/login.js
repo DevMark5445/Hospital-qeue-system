@@ -1,15 +1,6 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import Dashboard from "./Dashboard";
-
-import { 
-  Eye, EyeOff, Lock, Mail, AlertCircle, CheckCircle,
-  Activity, Calendar, Heart, Pill, FileText, Menu, X, Bell, 
-  Sun, Moon, LogOut, Home, Clock, ChevronRight
-} from 'lucide-react';
-
-// ============================================================================
-// LOGIN COMPONENTS
-// ============================================================================
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Eye, EyeOff, Lock, Mail, AlertCircle, CheckCircle } from 'lucide-react';
 
 // Alert Component
 const Alert = ({ type, message, onClose }) => {
@@ -65,7 +56,8 @@ const Input = ({ label, error, icon: Icon, ...props }) => {
 };
 
 // Login Component
-const Login = ({ onLoginSuccess }) => {
+const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -124,7 +116,8 @@ const Login = ({ onLoginSuccess }) => {
       });
 
       setTimeout(() => {
-        onLoginSuccess(formData.email);
+        // Navigate to dashboard route
+        navigate('/dashboard');
       }, 1000);
 
     } catch (error) {
@@ -292,29 +285,4 @@ const Login = ({ onLoginSuccess }) => {
   );
 };
 
-// ============================================================================
-// MAIN APP
-// ============================================================================
-
-const App = () => {
-  const [currentPage, setCurrentPage] = useState('login');
-  const [userEmail, setUserEmail] = useState('');
-
-  const handleLoginSuccess = (email) => {
-    setUserEmail(email);
-    setCurrentPage('dashboard');
-  };
-
-  const handleLogout = () => {
-    setUserEmail('');
-    setCurrentPage('login');
-  };
-
-  if (currentPage === 'dashboard') {
-    return <Dashboard onLogout={handleLogout} userEmail={userEmail} />;
-  }
-
-  return <Login onLoginSuccess={handleLoginSuccess} />;
-};
-
-export default App;
+export default Login;
