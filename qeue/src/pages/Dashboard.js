@@ -55,7 +55,7 @@ const generateMockData = (endpoint) => {
       weight: { value: 165, unit: 'lbs', change: -2, lastUpdated: '1 week ago' }
     };
   }
-  if (endpoint === '/patient/appointments') {
+  if (endpoint === '/pages/appointments') {
     return [
       { id: 1, doctor: 'Dr. Sarah Johnson', specialty: 'Cardiologist', date: '2025-12-28', time: '10:00 AM', type: 'In-Person', status: 'confirmed' },
       { id: 2, doctor: 'Dr. Michael Chen', specialty: 'General Practice', date: '2026-01-05', time: '2:30 PM', type: 'Video Call', status: 'confirmed' },
@@ -298,7 +298,7 @@ const Sidebar = ({ isOpen, onClose }) => {
   
   const navItems = [
     { icon: Home, label: 'Dashboard', href: '#' },
-    { icon: Calendar, label: 'Appointments', href: '#' },
+    { icon: Calendar, label: 'Appointments', href: '/Appoint' },
     { icon: Pill, label: 'Medications', href: 'Medication' },
     { icon: FileText, label: 'Medical Records', href: '#' },
     { icon: Activity, label: 'Health Tracking', href: '#' },
