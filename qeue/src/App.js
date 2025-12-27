@@ -1,14 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './componets/Navbar';
-import Qeue from './pages/Qeue';
-import Login from './pages/Login';
-import Medication from './pages/Medication';
-import Appoint from './pages/Appoint';
- 
-import Dashboard from './pages/Dashboard';
+import Qeue from './pages/Qeue.js';
+import Login from './pages/Login.js';
+import Medication from './pages/Medication.js';
+import Appoint from './pages/Appoint.js';
+import Dashboard from './pages/Dashboard.js';
 import Footer from './componets/Footer';
-import Home from './pages/Home';
+import Home from './pages/Home.js';
 
 function App() {
     return(
@@ -24,9 +23,6 @@ function App() {
                         <Route path='/medication' element={<Medication />} />
                         <Route path='/appoint' element={<Appoint />} />
                         <Route path='/dashboard' element={<Dashboard />} />
-                      
-                        
-                       
                     </Routes>
                 </div>
                 <Footer />
