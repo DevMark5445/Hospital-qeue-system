@@ -10,7 +10,8 @@ const DEPARTMENTS = [
   { id: 2, name: 'Neurology', icon: '🧠' },
   { id: 3, name: 'Orthopedics', icon: '🦴' },
   { id: 4, name: 'Pediatrics', icon: '👶' },
-  { id: 5, name: 'Dermatology', icon: '✨' }
+  { id: 5, name: 'Dermatology', icon: '✨' },
+  { id: 6, name: 'Malaria', icon: '✨' }
 ];
 
 const DOCTORS = [
@@ -63,9 +64,8 @@ const appointmentService = {
   }
 };
 
-// ============================================================================
 // UTILITY COMPONENTS
-// ============================================================================
+
 
 const StatusBadge = ({ status }) => {
   const statusConfig = {
