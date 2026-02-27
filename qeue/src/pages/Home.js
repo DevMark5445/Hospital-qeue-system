@@ -31,8 +31,8 @@ function Home() {
           <div className="about-content">
             <div className="about-text">
               <h2>Welcome to Your Health Center</h2>
-              <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-              <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+              <p>We are committed to providing quality, accessible, and efficient healthcare services to our patients. Our center is designed to ensure comfort, safety, and timely medical attention.</p>
+              <p>Through our modern queue management system, patients can register, track their position, and receive services without unnecessary delays. Your health and well-being are our top priority.</p>
               
               <div className="profile-card">
                 <img src={pic2}/>
@@ -121,7 +121,7 @@ function Home() {
               <div className="news-content">
                 <span className="news-date">March 08, 2018</span>
                 <h3><a href="news-detail.html">About Amazing Technology</a></h3>
-                <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                <p>Amazing Technology is a forward-thinking company dedicated to developing innovative digital solutions that improve efficiency and user experience. We specialize in building reliable systems, including healthcare management platforms, that streamline operations and enhance service delivery.</p>
                 <div className="author-info">
                    <img src={pic2}/>
                   <div>
@@ -139,7 +139,7 @@ function Home() {
               <div className="news-content">
                 <span className="news-date">February 20, 2018</span>
                 <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+                <p>We are proud to introduce an innovative healing approach designed to improve patient recovery and overall well-being. This new process combines modern medical technology with personalized care to ensure faster diagnosis, effective treatment, and continuous monitoring.</p>
                 <div className="author-info">
                   <img src={pic11}/>
                   <div>
@@ -157,7 +157,7 @@ function Home() {
               <div className="news-content">
                 <span className="news-date">January 27, 2018</span>
                 <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
-                <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+                <p>Each year, our medical team conducts and evaluates comprehensive research to improve treatment methods, patient care standards, and healthcare technologies.</p>
                 <div className="author-info">
                       <img src={pic3}/>
                   <div>
@@ -172,62 +172,7 @@ function Home() {
       </section>
 
       {/* Appointment Section */}
-      <section id="appointment" className="appointment-section">
-        <div className="container">
-          <div className="appointment-content">
-            <div className="appointment-image">
-              <img src={pic2}/>
-            </div>
-
-            <div className="appointment-form">
-              <h2>Make an appointment</h2>
-              
-              <form>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" />
-                  </div>
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="date">Select Date</label>
-                    <input type="date" id="date" name="date" />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="department">Select Department</label>
-                    <select id="department" name="department">
-                      <option>General Health</option>
-                      <option>Cardiology</option>
-                      <option>Dental</option>
-                      <option>Medical Research</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="form-group full-width">
-                  <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone" />
-                </div>
-
-                <div className="form-group full-width">
-                  <label htmlFor="message">Additional Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
-                </div>
-
-                <button type="submit" className="submit-btn">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }

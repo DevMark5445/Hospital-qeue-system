@@ -79,9 +79,6 @@ const Navbar = () => {
                 <Link to="/login" className="login-option" onClick={handleLoginClick}>
                   Login
                 </Link>
-                <Link to="/register" className="login-option" onClick={handleLoginClick}>
-                  Register
-                </Link>
               </div>
             </div>
 
